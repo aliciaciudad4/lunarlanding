@@ -20,8 +20,8 @@ Nos hemos informado sobre el uso de los media queries y es una herramienta muy �
 Hemos visto que es posible introducir un media query en el head del documento html para que cargue diferentes hojas de estilos según el tamaño, cuando la pantalla alcanza el punto de rotura se carga otro CSS.
 
 El media query que hemos utilizado es el siguiente: 
-<link rel="stylesheet" media="screen and (min-width:720px)" href="css/pc-estilo.css">
-<link rel="stylesheet" media="screen and (max-width:720px)" href="css/mob-estilo.css">
+> "<link rel="stylesheet" media="screen and (min-width:720px)" href="css/pc-estilo.css">"
+> "<link rel="stylesheet" media="screen and (max-width:720px)" href="css/mob-estilo.css">"
 
 ## Estética
 Hemos aprovechado las transparencias que ofrece el formato de imagen .png, de este modo creemos que queda bien sin molestarse el fondo.
