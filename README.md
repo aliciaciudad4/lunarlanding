@@ -1,6 +1,7 @@
 # lunarlanding
 
 ## Enlace de las páginas:
+Acceso mediante Rawgit a index.html https://cdn.rawgit.com/aliciaciudad4/lunarlanding/eb4b766f/index.html
 Acceso mediante Rawgit a instrucciones.html  https://cdn.rawgit.com/aliciaciudad4/lunarlanding/959a582a/instrucciones.html
 ## El posicionamiento de elementos
 
