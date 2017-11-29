@@ -1,4 +1,7 @@
 # lunarlanding
+
+## Enlace de las páginas:
+Acceso mediante Rawgit a instrucciones.html  https://cdn.rawgit.com/aliciaciudad4/lunarlanding/959a582a/instrucciones.html
 ## El posicionamiento de elementos
 
 En esta practica nos hemos centrado mucho en el posicionamiento, hemos probado varios métodos de posicionamiento de los que dispone CSS como por ejemplo:
