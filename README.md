@@ -42,6 +42,9 @@ La herramienta que hemos utilizado es [HTML Minifier de willpeavy.com](https://w
 ## Git branch
 Nos hemos informado un poco sobre los branch de git y procedemos a crear una para así tener el proyecto principal en la rama master y el proyecto minificado en la rama minified.
 
+## Validación W3
+En el documento mob-estilo.css nos indica que en la linia 61 la propiedad position no tiene un valor sticky, pero si cambiamos dicho valor si que afecta al posicionamiento. Por ese motivo mantenemos el sticky.
+
 
 
 
