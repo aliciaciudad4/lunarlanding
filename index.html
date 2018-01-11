@@ -1,38 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lunar Landing</title>
+ <title>Lunar Lander</title>
+ <meta charset="utf-8">
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
+ <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
 
-  <link rel="stylesheet" media="screen and (min-width:720px)" href="css/pc-estilo.css">
-  <link rel="stylesheet" media="screen and (max-width:720px)" href="css/mob-estilo.css">
+<!-- Importamos Fuentes iconicas de fontawesome utilizando el CDN -->
+ <script src="https://use.fontawesome.com/2d44ea932b.js"></script>
 
-
+ <script src="js/js.js"></script>
 </head>
 <body>
-    <div id="espacio">
-      <div id="panel">
-      <table>
-        <tr><td>Velocitat</td><td>1000KM/H</td></tr>
-        <tr><td>Combustible</td><td>10000 L</td></tr>
-        <tr><td>Altura</td><td>1000000 KM</td></tr>
-      </table>
-      </div>
-      <div id="cohete">
-        <img src="img/cohete.png" alt="">
-      </div>
-      <div id="opciones">
-        <ul>
-          <li><a href="index.html">Pausar / Play</a></li>
-          <li><a href="index.html">Reiniciar</a></li>
-          <li><a href="instrucciones.html">Cómo jugar</a></li>
-        </ul>
-      </div>
-      <div id="luna">
-        <img src="img/moon.png" alt="Imagen luna">
-      </div>
-    </div>
+<div id="dificultad">
+ <div id="menuDificultad">
+  <h1>Bienvenido</h1>
+  <p>Elige una dificultad:</p>
+  <div class="alineado">
+   <a href="facil.html" class="btnDificultad" id="dificultad1">Fácil <br><i class="fa fa-smile-o"></i></a>
+   <a href="medio.html" class="btnDificultad" id="dificultad2">Medio <br><i class="fa fa-meh-o"></i></a>
+   <a href="dificil.html" class="btnDificultad" id="dificultad3">Difícil <br><i class="fa fa-frown-o"></i></a>
+  </div>
+ </div>
+</div>
+
+
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lunar Landing - Modo fácil</title>
+    <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
+    <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
+
+    <!-- Importamos Fuentes iconicas de fontawesome utilizando el CDN -->
+    <script src="https://use.fontawesome.com/2d44ea932b.js"></script>
+
+    <script src="js/js.js"></script>
+    <script>
+        iniciaUmbral(3);
+    </script>
+</head>
+<body>
+    <div id="nave">
+        <img id="nave-img" src="img/coheteOFF.png" alt="img cohete">
+    </div>
+    <div id="gameOver">
+        <p id="msgGameOVer">Game Over</p>
+        <p id="msgWin"></p>
+    </div>
+    <div class="a">
+        <div id="showm">show menu</div>
+        <ul id="cpanel">
+            <li>Velocidad <span id="velocidad">100</span> m/s</li>
+            <li>Fuel <span id="fuel">100</span> l</li>
+            <li>Altura <span id="altura">70</span> m</li>
+        </ul>
+    </div>
+    <div class="b">
+    </div>
+    <div class="c">
+        <div id="hidem">hide menu</div>
+        <ul id="menu">
+            <li onclick="confirmarSalida(1)"><a href="" >Reiniciar</a></li>
+            <li onclick="confirmarSalida(2)"><a href="">Instrucciones</a></li>
+            <li onclick="confirmarSalida(3)"><a href="" >Acerca de...</a></li>
+        </ul>
+    </div>
+    <div class="d">
+        <img id="moon" src="img/moon.png" alt="moon">
+    </div>
+
+</body>
+</html>
