@@ -1,51 +1,49 @@
-# lunarlanding
+# Lunar lander con html, css y javascript
+Versión esqueleto del juego Lunar Landing que incluye:
 
-## Enlace de las páginas:
-Acceso mediante Rawgit a index.html https://cdn.rawgit.com/aliciaciudad4/lunarlanding/eb4b766f/index.html
-Acceso mediante Rawgit a instrucciones.html  https://cdn.rawgit.com/aliciaciudad4/lunarlanding/959a582a/instrucciones.html
-## El posicionamiento de elementos
+* Html con los elementos básicos del juego
+* Css: d.css y m.css dos versiones que cargan mediante media query dependiendo del tamaño de pantalla.
+* Js: programación realista básica necesaria para dejar caer la nave y parar cuando llega a un límite. Actualiza la velocidad y la altura en %/s y % (1% de pantalla = 1 metro).
+* No dispone de imágenes.
 
-En esta practica nos hemos centrado mucho en el posicionamiento, hemos probado varios métodos de posicionamiento de los que dispone CSS como por ejemplo:
-..* position: absolute;
-..* position: relative;
-..* position: sticky;
+Previsualización: https://rawgit.com/urbinapro/lunar-landing-javascript/master/index.html
 
-El que nos ha funcionado mejor para colocar el panel de control de la nave y el menú de opciones ha sido el relative, ya que hemos podido jugar con los valores de top y left principalmente.
-Con el position: absolute no nos ha gustado el resultado ya que desplaza los otros elementos div, donde hace ocupar el espacio que deja libre al contrario que relative el cual mantiene el espacio inicial del div.
+Tareas a desarrollar:
+* Ponerlo bonito según vuestro diseño anterior. No te olvides de optimizar las imágenes. Recuerda que se pueden cargar diferentes tamaños y formas de fondos en función del dispositivo usando css.
 
-El position: sticky lo hemos utilizado para la nave para dar un especie de efecto como si quedara flotando enmedio de la pantalla.
+>Hemos intentando adaptar lo mejor posible los elementos utilizados en el anterior Lunar Landing, nos hemos basado en la estructura ofrecida para colocar correctamente los elementos utilizando las propiedes de posicionamiento de CSS. Hemos adaptado los elementos para que se adapten a una pantalla de ordenador en el fichero d.css y para dispositivos móviles hemos adaptado los estilos en el fichero m.css
 
-## Tamaños y paddings
-Hemos podido trabajar con tamaños, hemos visto que cuando utilizamos medidas exactas en pixeles hay que calcular aproximadamente las distancias para cuadrar las posiciones, sobretodo a la hora de adaptarlo en diferentes dispostivos.
-Por ese motivo, hemos intentado utilizar medidas de tamaños con un valor porcentual para que se adapte un poco mejor al tamaño de la pantalla en caso de que cambie.
+* Poner los menús (móvil y escritorio) según vuestro diseño anterior.
 
-## Media queries
-Nos hemos informado sobre el uso de los media queries y es una herramienta muy útil para adaptar nuestra página web a diferentes tamaños de pantalla de diferentes dispositivos.
-Hemos visto que es posible introducir un media query en el head del documento html para que cargue diferentes hojas de estilos según el tamaño, cuando la pantalla alcanza el punto de rotura se carga otro CSS.
+>Se han añadido los menús , no obstante los enlaces se han adaptado para reiniciar el juego y visitar las páginas de información. 
 
-El media query que hemos utilizado es el siguiente: 
-> "link rel="stylesheet" media="screen and (min-width:720px)" href="css/pc-estilo.css""
-> "link rel="stylesheet" media="screen and (max-width:720px)" href="css/mob-estilo.css""
+* Al pulsar una tecla, hacer click en el botón de power o bien hacer click en la pantalla la nave debe cambiar de aspecto a *nave con motor encendido* y debe cambiar la aceleración de g a -g (ejecutar motorOn).
 
-## Estética
-Hemos aprovechado las transparencias que ofrece el formato de imagen .png, de este modo creemos que queda bien sin molestarse el fondo.
+> Hemos modificado el código JS en el fichero js.js para poder cambiar la imagen de la nave, de este modo el proyecto dispone de dos imágenes para la nave (coheteON.png y cocheteOFF.png) donde hemos editado la imágen para eliminar la simulación de expulsión de fuego, al intercambiar las imágenes da la sensación de que el motor se enciende y apagar.
+> Para conseguir éste efecto hemos capturado el elemento imágen, el cual dispone de un id propio, utilizando la función getElementById y cambiando la propiedad src de la imágen.
 
-Las imagenes que hemos utilizado las hemos encontrado en Google utilizando el filtro "Etiquetas para reutilización no comercial".
+* Opcionalmente se pueden disponer de menores o mayores tanques de combustible para aumentar o disminuir la dificultad del juego.
 
-Hemos aprendido el efecto :hover el cual lo hemos aplicado en los botónes para que cuando se pase el ratón por encima se aplique otro estilo.
+>Hemos crado 3 documentos HTML para los 3 diferentes nivel de dificultad, de esta manera cuando se inicia cada modo se carga el fichero html correspondiente, dentro de dicho documento hemos añadido un script el cual llama una funcion definida en js.js y le pasamos por paràmetro un valor númerico el cual pasará a ser el umbral.
 
-## Minificación
-Hemos descubierto la herramienta de minificación para ficheros HTML y CSS la cual, nos elimina los espacios en blanco y saltos de linia para conseguir reducir el peso de nuestros ficheros.
+* Al tocar fondo debe mirarse si la velocidad de impacto es inferior a un valor umbral, en caso afirmativo mostrar mensaje de felicitación, en caso negativo explotar la nave. En ambos casos el juego finaliza y puede reiniciarse con la opción del menú *reiniciar*
 
-La herramienta que hemos utilizado es [HTML Minifier de willpeavy.com](https://www.willpeavy.com/minifier/)
+>Disponemos de la variable umbral, la cual fijará el limite de velocidad para estrellarse o no, posteriomente hemos definido una funcion la cual al llegar abajo comprueba si el valor de la velocidad es inferior o mayor al umbral. La comprobación se realiza con un if y según el valor aparece un mensaje indicando si ha ganado o perdido, en caso de perder la imagén de la nave cambia a una imagen de boom
 
-## Git branch
-Nos hemos informado un poco sobre los branch de git y procedemos a crear una para así tener el proyecto principal en la rama master y el proyecto minificado en la rama minified.
+* Debes poder elegir diferentes valores umbrales: 1m/s en modo difícil, 5m/s en modo muy fácil.
 
-## Validación W3
-En el documento mob-estilo.css nos indica que en la linia 61 la propiedad position no tiene un valor sticky, pero si cambiamos dicho valor si que afecta al posicionamiento. Por ese motivo mantenemos el sticky.
+>Según el modo de dificultad se inicia un valor en el umbral
 
+* Debe haber una página de *How to play* y una página de *About* accesibles desde el menú (vas a otras páginas saliendo del juego con un avisador o mensaje de comfirmación de que sales de la partida).
 
+> Se han generado ficheros html para acceder con el menú
 
+Cualquier otra funcionalidad o cambio debe quedar debidamente documentado.
+> Añadida funcion compruebaAterrizaje() para comprobar si va a explotar o no la nave según la velocidad linia 67 de js.js
+> Añadida funcion confirmarSalida(accion) para pedir si está seguro que desea salir de la partida linia 117 de js.js
+> Añadida funcion iniciaUmbral(numero) para inicializar el valor del umbral en linia 142 de js.js
+>
 
+**Este repositorio es susceptible de sufrir modificaciones sin previo aviso**
 
+Se ha validado los documentos html mediante el validador de W3
